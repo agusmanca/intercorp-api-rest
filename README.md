@@ -18,7 +18,7 @@ Dependencias:
 
 El endpoint root para acceder a los distintos servicios desplegados es:
 
-    https://intercorp-app-web-amanca.web.app/clientes
+    https://intercorp-rest-api-amanca.herokuapp.com/clientes
 
 ##Desarrollo
 
