@@ -61,8 +61,8 @@ Para ello debera pasarse por payload la siguiente estructura
 
 ## * Para mayor información, una vez desplegado el proyecto de forma local ingresar a la documentación de Swagger.
 
-    [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
     
 o desde: 
 
-    [https://intercorp-rest-api-amanca.herokuapp.com/swagger-ui.html](https://intercorp-rest-api-amanca.herokuapp.com/swagger-ui.html)
+[https://intercorp-rest-api-amanca.herokuapp.com/swagger-ui.html](https://intercorp-rest-api-amanca.herokuapp.com/swagger-ui.html)
