@@ -9,13 +9,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 import java.util.List;
 import java.util.Objects;
 
 @Controller
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = { "http://localhost:4200", "*", "http://localhost:8080/swagger-ui.html" }, methods = {RequestMethod.GET, RequestMethod.POST})
 @RequestMapping("/cliente")
 @Api(tags = "Cliente Controller", value = "Operaciones para la busqueda y creación de clientes")
 public class ClienteController {
@@ -55,13 +53,14 @@ public class ClienteController {
     }
 
     @PostMapping("/creacliente")
+    @CrossOrigin(origins = "*")
     @ApiOperation(nickname = "Crear usuario", value = "Cree un nuevo usuario", notes = "Permite registrar un nuevo usuario en la base.")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Sucessful", response = ResponseEntity.class),
             @ApiResponse(code = 404, message = "Not Found", response = ResponseEntity.class),
             @ApiResponse(code = 500, message = "Internal server error", response = ResponseEntity.class)
     })
-    public ResponseEntity<?> crearCliente(@ApiParam(value = "Payload del nuevo usuario.") @Valid @RequestBody ClienteDto request) {
+    public ResponseEntity<?> crearCliente(@ApiParam(value = "Payload del nuevo usuario.") @RequestBody ClienteDto request) {
         ClienteDto cliente;
 
         if(Objects.isNull(request.getId())) {
