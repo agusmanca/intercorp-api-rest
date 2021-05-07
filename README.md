@@ -16,7 +16,7 @@ Dependencias:
     - ModelMapper
     - Lombook
 
-El endpoint root para acceder a los distintos servicios desplegados es: [ingrese aquí](https://amanca-intercorp-rest-api.herokuapp.com)
+El endpoint root para acceder a los distintos servicios desplegados es: 
 
     https://amanca-intercorp-rest-api.herokuapp.com
 
